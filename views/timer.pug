@@ -1,0 +1,39 @@
+html
+  head
+    title Sync Timer
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    include partials/head.pug
+    link(rel="stylesheet", type="text/css", href="/css/timer.css")
+    
+  body(onload="getDisplayElements()")
+    div.uk-container.uk-card.uk-card-default.uk-padding.uk-box-shadow-small
+
+      span#timerId.uk-alert.uk-text-large=myTimerId
+      i#running-state
+      a.uk-float-right.uk-link-text.uk-text-large(href='/') Home
+      hr
+      div#timer-display.uk-flex.uk-flex-center
+        div#minutes.digit
+          div 00
+        div.separator :
+        div#seconds.digit
+          div 00
+        div.separator .
+        div#centiseconds.digit
+          div 00
+
+    div.uk-container.uk-flex.uk-flex-between.uk-child-width-expand.uk-margin-small-top
+       button#start-button.uk-button.uk-button-primary.uk-padding-small.uk-padding-remove-horizontal.uk-box-shadow-small(onclick="startTimer()")
+         i.material-icons play_arrow
+       button#stop-button.uk-button.uk-button-danger.uk-padding-small.uk-padding-remove-horizontal.uk-box-shadow-small(onclick="stopTimer()")
+         i.material-icons pause
+       button#stop-button.uk-button.uk-button-default.uk-padding-small.uk-padding-remove-horizontal.uk-box-shadow-small(onclick="resetTimer()")
+         i.material-icons replay
+    
+  script(type="text/javascript", src="/socket.io/socket.io.js")
+  script.
+    myTimerId="#{timerId}"
+  script(type="text/javascript", src="/js/timerController.js")
+  script(type="text/javascript", src="/js/socket.js")
+
+

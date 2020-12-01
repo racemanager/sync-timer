@@ -1,0 +1,94 @@
+body {
+  color: #555;
+  background-color: #ecf0f3;
+  font-family: "Roboto Condensed", "sans-serif"; }
+
+button {
+  color: #555;
+  background-color: rgba(255, 255, 255, 0.15);
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s; }
+  button:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s; }
+  button:focus {
+    outline: none; }
+  button i {
+    font-size: 8vmin !important; }
+
+.index-form {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  -webkit-justify-content: space-evenly;
+  justify-content: space-evenly;
+  align-items: center; }
+
+.join-form {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  align-items: center; }
+
+.menu-field {
+  color: #555;
+  font-size: 10vh;
+  width: 75vh;
+  margin: 2vh;
+  background-color: transparent;
+  border-width: 0 0 1px 0;
+  text-align: center; }
+  .menu-field::-webkit-input-placeholder {
+    font-size: 5vh; }
+    @media all and (max-aspect-ratio: 1 / 1) {
+      .menu-field::-webkit-input-placeholder {
+        font-size: 5vw; } }
+  .menu-field::-moz-placeholder {
+    font-size: 5vh; }
+    @media all and (max-aspect-ratio: 1 / 1) {
+      .menu-field::-moz-placeholder {
+        font-size: 5vw; } }
+  .menu-field:-ms-input-placeholder {
+    font-size: 5vh; }
+    @media all and (max-aspect-ratio: 1 / 1) {
+      .menu-field:-ms-input-placeholder {
+        font-size: 5vw; } }
+  .menu-field:-moz-placeholder {
+    font-size: 5vh; }
+    @media all and (max-aspect-ratio: 1 / 1) {
+      .menu-field:-moz-placeholder {
+        font-size: 5vw; } }
+  @media all and (max-aspect-ratio: 1 / 1) {
+    .menu-field {
+      font-size: 10vw;
+      width: 75vw;
+      margin: 1vw; } }
+  .menu-field:focus {
+    outline: none; }
+
+.or {
+  font-size: 7vh;
+  margin: 7vh; }
+  @media all and (max-aspect-ratio: 1 / 1) {
+    .or {
+      font-size: 7vw;
+      margin: svw; } }
+
+.menu-button {
+  font-size: 8vh; }
+  @media all and (max-aspect-ratio: 1 / 1) {
+    .menu-button {
+      font-size: 8vw; } }
+
+#new-timer {
+  margin: 0 0 5vh 0; }
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-family: "Roboto Condensed", "sans-serif"; }

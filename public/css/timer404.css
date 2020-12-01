@@ -1,0 +1,18 @@
+body {
+  color: #555;
+  background-color: #ecf0f3;
+  font-family: "Roboto Condensed", "sans-serif"; }
+
+button {
+  color: #555;
+  background-color: rgba(255, 255, 255, 0.15);
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s; }
+  button:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s; }
+  button:focus {
+    outline: none; }
+  button i {
+    font-size: 8vmin !important; }

@@ -1,0 +1,20 @@
+html
+  head
+    title Sync Timer
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    include partials/head.pug
+    link(rel="stylesheet", type="text/css", href="/css/index.css")
+    
+  body(onload="initialize()")
+    div.index-container
+    
+    span=myTimerId
+        
+      div.index-form.uk-card.uk-card-default.uk-padding-large.uk-box-shadow-small
+        div.join-form
+          input#timer-id-field.uk-input(type="text" placeholder="Enter Timer ID")
+          button.uk-button.uk-button-primary.uk-margin-top(onclick="gotoTimer();") Join Timer
+        p OR
+        button#new-timer.uk-button.uk-button-default(onclick="window.location.href='timer/new';") Create Timer
+
+  script(type="text/javascript", src="js/index.js")

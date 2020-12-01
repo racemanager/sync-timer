@@ -1,0 +1,101 @@
+body {
+  color: #555;
+  background-color: #ecf0f3;
+  font-family: "Roboto Condensed", "sans-serif"; }
+
+.uk-button-default {
+ background-color:#fff }
+ 
+ .uk-button-default:hover {
+ background-color:#fafafa }
+
+.info-container {
+  width: 100%; }
+
+.info {
+  margin: 2vh 2vh;
+  font-size: 3vw;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between; }
+  @media all and (max-aspect-ratio: 1 / 1) {
+    .info {
+      margin: 2vw 2vw;
+      font-size: 3vh; } }
+
+.id-tip {
+  display: absolute;
+  left: 20vw;
+  width: 15vw;
+  font-size: 1.5vw; }
+  @media all and (max-aspect-ratio: 1 / 1) {
+    .id-tip {
+      left: 20vh;
+      width: 15vh;
+      font-size: 1.5vh; } }
+
+@keyframes enter {
+  from {
+    color: rgba(255, 255, 255, 0);
+    transform: translateY(-5vw); }
+  to {
+    color: white;
+    transform: translateY(0); } }
+
+@keyframes exit {
+  from {
+    color: white;
+    transform: translateY(0); }
+  to {
+    color: rgba(255, 255, 255, 0);
+    transform: translateY(5vw); } }
+
+#timer-display {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 20vmin;
+  line-height: 1;
+  font-family: 'Titillium Web', sans-serif;}
+
+.digit {
+  width: auto; }
+
+.separator {
+  text-align: center;
+  vertical-align: middle;
+  width: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.buttons {
+  width: auto;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  margin: 0; }
+
+button.uk-button-primary {
+  background-color: #2aa197 !important; }
+
+.timer-ui {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%; }
+
+
+
