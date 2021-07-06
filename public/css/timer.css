@@ -1,13 +1,27 @@
 body {
-  color: #555;
-  background-color: #ecf0f3;
-  font-family: "Roboto Condensed", "sans-serif"; }
+  color: #fff;
+  background-color: #1b242d;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+  
+ .uk-alert {
+   background: #1b242d!important
+ }
+ 
+ .uk-card {
+   background-color:#161c23;
+   color: #d0d0d0
+ }
 
 .uk-button-default {
- background-color:#fff }
+  background-color:#161c23;
+  border: 1px solid #2c3946!important;
+  color: #d0d0d0
+}
  
  .uk-button-default:hover {
- background-color:#fafafa }
+  background-color:#161c23b5
+}
 
 .info-container {
   width: 100%; }
@@ -25,33 +39,6 @@ body {
       margin: 2vw 2vw;
       font-size: 3vh; } }
 
-.id-tip {
-  display: absolute;
-  left: 20vw;
-  width: 15vw;
-  font-size: 1.5vw; }
-  @media all and (max-aspect-ratio: 1 / 1) {
-    .id-tip {
-      left: 20vh;
-      width: 15vh;
-      font-size: 1.5vh; } }
-
-@keyframes enter {
-  from {
-    color: rgba(255, 255, 255, 0);
-    transform: translateY(-5vw); }
-  to {
-    color: white;
-    transform: translateY(0); } }
-
-@keyframes exit {
-  from {
-    color: white;
-    transform: translateY(0); }
-  to {
-    color: rgba(255, 255, 255, 0);
-    transform: translateY(5vw); } }
-
 #timer-display {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -59,9 +46,9 @@ body {
   -webkit-justify-content: center;
   justify-content: center;
   width: 100%;
-  font-size: 20vmin;
+  font-size: 12vw;
   line-height: 1;
-  font-family: 'Titillium Web', sans-serif;}
+  font-family: 'Share Tech Mono', monospace; }
 
 .digit {
   width: auto; }
