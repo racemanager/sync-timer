@@ -17,29 +17,13 @@ socket.on("connect", function () {
     }
   });
 
-  socket.on("timer started", function () {
-    statusEl.classList.remove("fa-pause");
-    statusEl.classList.remove("fa-spinner");
-    statusEl.classList.remove("fa-spin");
-    statusEl.classList.remove("fa-exclamation-triangle");
-    statusEl.classList.add("fa-play");
-  });
-
-  socket.on("timer stopped", function () {
-    statusEl.classList.remove("fa-play");
-    statusEl.classList.remove("fa-spinner");
-    statusEl.classList.remove("fa-spin");
-    statusEl.classList.remove("fa-exclamation-triangle");
-    statusEl.classList.add("fa-pause");
-  });
-
   socket.on("timer error", function () {
     showError();
   });
 
   socket.on("new user joining", function (data) {
     if (data.clientId !== socket.id) {
-      console.log("User " + data.clientId + "has joined in.");
+      console.log("User " + data.clientId + " has joined in.");
     }
   });
 
