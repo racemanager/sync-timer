@@ -2,7 +2,8 @@
 
 const { logExceptInTest } = require('../helpers');
 const Timer = require('./Timer');
-const uniqid = require('uniqid');
+//const uniqid = require('uniqid');
+let x = 0;
 
 const timerGCDelay = 5 * 60 * 1000; // 5 minutes 
 
@@ -27,7 +28,7 @@ class RoomManager {
   }
 
   createTimer() {
-    const id = uniqid.time();
+    const id = x++; // uniqid.time() OR uniqid.process('race-')
     const timer = new Timer(this.updateCallback, id);
     this.timerList[id] = timer;
     logExceptInTest(`New Timer ${id} created`);
@@ -135,9 +136,7 @@ class RoomManager {
     if (!this.clientExists(clientId)) {
       logExceptInTest(`removeClientFromAnyTimer: User ${clientId} not found.`);
       return false;
-    }
-
-    else {
+    } else {
       for (var timerId in this.timerList) {
         if (this.timerList[timerId].clients.includes(clientId)) {
           return this.removeClientFromTimer(timerId, clientId);
