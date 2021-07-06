@@ -6,20 +6,31 @@ html
     link(rel="stylesheet", type="text/css", href="/css/index.css")
     
   body(onload="initialize()")
-    div.uk-container.uk-padding-remove-horizontal.uk-position-small.uk-position-top-center
-      div.uk-card.uk-card-default.uk-padding.uk-box-shadow-small
+    div.uk-container.uk-padding-remove-horizontal.uk-position-small.uk-position-center
+    
+      div.uk-card.uk-card-default.uk-padding.uk-box-shadow-large.uk-border-rounded
+        span#timerId.uk-badge.uk-margin-bottom
+        span.uk-float-right SyncTimer
+        
         div
-          input#timer-id-field.uk-input.uk-width-auto(type="text" placeholder="Enter Timer ID" value="" autofocus)
+          input#timer-id-field.uk-input.uk-width-auto(type="text" placeholder="Enter Timer ID" autofocus)
           button.uk-button.uk-button-primary.uk-width-auto(onclick="gotoTimer();") Join
-        div.uk-flex.uk-flex-between.uk-margin-top
-          button#new-timer.uk-button.uk-button-default.uk-width-1-2.uk-text-nowrap(onclick="window.location.href='timer/new';") New Timer
+        div.uk-flex.uk-flex-between.uk-margin-top.uk-width-expand
+          button#new-timer.uk-button.uk-button-default.uk-width-1-1.uk-text-nowrap(onclick="window.location.href='timer/new';") New Timer
           div(uk-lightbox).uk-width-1-2.uk-margin-small-left
-            a#timerId.uk-button.uk-button-default.uk-width-expand(data-type="iframe" href="/timer/new" data-caption="currentTimer")
+            a.uk-button.uk-button-default.uk-width-auto(data-type="iframe" href="/timer/new") Modal
+              
+        div.uk-flex.uk-flex-center.uk-text-center.uk-margin-top
+          span.uk-text-small.uk-text-muted
+            a(href="https://github.com/racemanager/sync-timer") //github.com/racemanager/sync-timer
+            br
+            span Stripped-down version of
+            br
+            a(href="https://github.com/mstop4/sync-timer") //github.com/mstop4/sync-timer
             
 script(type="text/javascript", src="js/index.js")
 
 script(type="text/javascript", src="/socket.io/socket.io.js")
 script.
   myTimerId="#{timerId}"
-script(type="text/javascript", src="/js/timerController.js")
 script(type="text/javascript", src="/js/socket.js")
