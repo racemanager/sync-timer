@@ -1,20 +1,25 @@
 html
   head
-    title Sync Timer
+    title RMSync
     meta(name='viewport' content='width=device-width, initial-scale=1')
     include partials/head.pug
     link(rel="stylesheet", type="text/css", href="/css/index.css")
     
   body(onload="initialize()")
-    div.index-container
-    
-    span=myTimerId
-        
-      div.index-form.uk-card.uk-card-default.uk-padding-large.uk-box-shadow-small
-        div.join-form
-          input#timer-id-field.uk-input(type="text" placeholder="Enter Timer ID")
-          button.uk-button.uk-button-primary.uk-margin-top(onclick="gotoTimer();") Join Timer
-        p OR
-        button#new-timer.uk-button.uk-button-default(onclick="window.location.href='timer/new';") Create Timer
+    div.uk-container.uk-padding-remove-horizontal.uk-position-small.uk-position-top-center
+      div.uk-card.uk-card-default.uk-padding.uk-box-shadow-small
+        div
+          input#timer-id-field.uk-input.uk-width-auto(type="text" placeholder="Enter Timer ID" value="" autofocus)
+          button.uk-button.uk-button-primary.uk-width-auto(onclick="gotoTimer();") Join
+        div.uk-flex.uk-flex-between.uk-margin-top
+          button#new-timer.uk-button.uk-button-default.uk-width-1-2.uk-text-nowrap(onclick="window.location.href='timer/new';") New Timer
+          div(uk-lightbox).uk-width-1-2.uk-margin-small-left
+            a#timerId.uk-button.uk-button-default.uk-width-expand(data-type="iframe" href="/timer/new" data-caption="currentTimer")
+            
+script(type="text/javascript", src="js/index.js")
 
-  script(type="text/javascript", src="js/index.js")
+script(type="text/javascript", src="/socket.io/socket.io.js")
+script.
+  myTimerId="#{timerId}"
+script(type="text/javascript", src="/js/timerController.js")
+script(type="text/javascript", src="/js/socket.js")
