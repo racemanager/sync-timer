@@ -6,32 +6,32 @@ html
     link(rel="stylesheet", type="text/css", href="/css/timer.css")
     
   body(onload="getDisplayElements()")
-    div.uk-container.uk-flex.uk-flex-between
-      div.uk-position-small.uk-position-top-center
-        span#timerId.uk-badge.uk-margin-small-right
-        a.uk-float-right.uk-link-text(href='/') Home
-      
-      div.uk-position-center.uk-card.uk-card-default.uk-padding-small.uk-border-rounded.uk-box-shadow-large
-        div#timer-display.uk-flex
-          div#hours.digit
-            div 00
-          div.separator :
-          div#minutes.digit
-            div 00
-          div.separator :
-          div#seconds.digit
-            div 00
-          div.separator .
-          div#centiseconds.digit
-            div 00
+    div.uk-flex.uk-flex-center.uk-flex-middle
     
-        div.uk-container.uk-flex.uk-flex-between.uk-child-width-expand.uk-margin-top
-          button#start-button.uk-button.uk-button-default.uk-padding-small.uk-padding-remove-horizontal.uk-box-shadow-small(onclick="startTimer()")
-           i.material-icons play_arrow
-          button#stop-button.uk-button.uk-button-default.uk-padding-small.uk-padding-remove-horizontal.uk-box-shadow-small(onclick="stopTimer()")
-           i.material-icons pause
-          button#stop-button.uk-button.uk-button-default.uk-padding-small.uk-padding-remove-horizontal.uk-box-shadow-small(onclick="resetTimer()")
-           i.material-icons replay
+    div.uk-card.uk-padding-small
+      span#timerId.uk-badge
+      a.uk-float-right.uk-link-text(href='/') Home
+  
+    div#timer-display.uk-flex.uk-flex-between.uk-padding
+      div#hours.digit
+        div 00
+      div.separator :
+      div#minutes.digit
+        div 00
+      div.separator :
+      div#seconds.digit
+        div 00
+      div.separator .
+      div#centiseconds.digit
+        div 00
+          
+    div.uk-position-bottom.uk-flex.uk-flex-between.uk-child-width-expand
+      button#start-button.uk-button.uk-button-default.uk-padding-small.uk-padding-remove-horizontal.uk-box-shadow-small(onclick="startTimer()")
+       i.material-icons play_arrow
+      button#stop-button.uk-button.uk-button-default.uk-padding-small.uk-padding-remove-horizontal.uk-box-shadow-small(onclick="stopTimer()")
+       i.material-icons pause
+      button#stop-button.uk-button.uk-button-default.uk-padding-small.uk-padding-remove-horizontal.uk-box-shadow-small(onclick="resetTimer()")
+       i.material-icons replay
       
   script(type="text/javascript", src="/socket.io/socket.io.js")
   script.
